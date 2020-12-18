@@ -10,12 +10,12 @@
 import UIKit
 
 /// A dynamicly growing UITableView
-final class TableView: UITableView {
-  override var contentSize: CGSize {
+public final class TableView: UITableView {
+  public override var contentSize: CGSize {
     didSet { invalidateIntrinsicContentSize() }
   }
 
-  override var intrinsicContentSize: CGSize {
+  public override var intrinsicContentSize: CGSize {
     layoutIfNeeded()
 
     // I substract 1 here so that we don't see the rows bottom line of the last element.

@@ -9,7 +9,7 @@
 import UIKit
 
 // A Label that allows to add padding
-final class PaddingLabel: UILabel {
+public final class PaddingLabel: UILabel {
   private var top: CGFloat
   private var bottom: CGFloat
   private var left: CGFloat
@@ -27,12 +27,12 @@ final class PaddingLabel: UILabel {
     fatalError("init(coder:) has not been implemented")
   }
 
-  override func drawText(in rect: CGRect) {
+  public override func drawText(in rect: CGRect) {
     let insets = UIEdgeInsets.init(top: top, left: left, bottom: bottom, right: right)
     super.drawText(in: rect.inset(by: insets))
   }
 
-  override var intrinsicContentSize: CGSize {
+  public override var intrinsicContentSize: CGSize {
     let size = super.intrinsicContentSize
     return CGSize(width: size.width + left + right, height: size.height + top + bottom)
   }

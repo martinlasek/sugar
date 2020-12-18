@@ -10,7 +10,7 @@
 import UIKit
 
 extension UIView {
-  func anchor(
+  public func anchor(
     top: NSLayoutYAxisAnchor? = nil,
     leading: NSLayoutXAxisAnchor? = nil,
     bottom: NSLayoutYAxisAnchor? = nil,
