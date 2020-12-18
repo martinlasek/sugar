@@ -6,7 +6,7 @@
 //  Copyright © 2020 Martin Lasek. All rights reserved.
 //
 
-#if canImport(UKit)
+#if canImport(UIKit)
 import UIKit
 
 extension UIView {

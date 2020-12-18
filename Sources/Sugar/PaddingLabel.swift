@@ -16,12 +16,11 @@ final class PaddingLabel: UILabel {
   private var right: CGFloat
 
   init(padding: UIEdgeInsets, hasUnderline: Bool = false) {
-    super.init(frame: .zero)
-
     self.top = padding.top
     self.left = padding.left
     self.bottom = padding.bottom
     self.right = padding.right
+    super.init(frame: .zero)
   }
 
   required init?(coder: NSCoder) {
