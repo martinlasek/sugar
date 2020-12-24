@@ -34,11 +34,11 @@ extension UIView {
     }
 
     if let bottom = bottom {
-      constraints.append(bottomAnchor.constraint(equalTo: bottom, constant: padding.bottom))
+      constraints.append(bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom))
     }
 
     if let trailing = trailing {
-      constraints.append(trailingAnchor.constraint(equalTo: trailing, constant: padding.right))
+      constraints.append(trailingAnchor.constraint(equalTo: trailing, constant: -padding.right))
     }
 
     if let centerX = centerX {
