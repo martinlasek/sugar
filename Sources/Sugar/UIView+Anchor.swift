@@ -9,7 +9,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UIView {
+public extension UIView {
   public func anchor(
     top: NSLayoutYAxisAnchor? = nil,
     leading: NSLayoutXAxisAnchor? = nil,
