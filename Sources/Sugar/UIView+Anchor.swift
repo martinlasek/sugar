@@ -10,7 +10,7 @@
 import UIKit
 
 public extension UIView {
-  public func anchor(
+  func anchor(
     top: NSLayoutYAxisAnchor? = nil,
     leading: NSLayoutXAxisAnchor? = nil,
     bottom: NSLayoutYAxisAnchor? = nil,
@@ -18,12 +18,15 @@ public extension UIView {
     centerY: NSLayoutYAxisAnchor? = nil,
     centerX: NSLayoutXAxisAnchor? = nil,
     padding: UIEdgeInsets = .zero,
-    size: CGSize = .zero
+    size: CGSize = .zero,
+    additional: [NSLayoutConstraint]? = nil
   ) {
 
     translatesAutoresizingMaskIntoConstraints = false
 
     var constraints: [NSLayoutConstraint] = []
+    
+    if let additional = additional { constraints.append(contentsOf: additional) }
 
     if let top = top {
       constraints.append(topAnchor.constraint(equalTo: top, constant: padding.top))
