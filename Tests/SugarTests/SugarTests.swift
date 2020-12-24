@@ -12,7 +12,8 @@ final class SugarTests: XCTestCase {
   }
 
   // MARK: UIKit required tests
-
+  
+  #if canImport(UIKit)
   func testTableView() {
     let _ = TableView()
   }
@@ -36,6 +37,11 @@ final class SugarTests: XCTestCase {
       size: CGSize(width: 1, height: 1)
     )
   }
+  
+  func testUIColorRGB() {
+    let _ = UIColor(r: 56, g: 82, b: 104)
+  }
+  #endif
 
   // MARK: All Tests
 
@@ -50,7 +56,8 @@ final class SugarTests: XCTestCase {
     testList.append(contentsOf: [
       ("testTableView", testTableView),
       ("testPaddingLabel", testPaddingLabel),
-      ("testViewAnchor", testViewAnchor)
+      ("testViewAnchor", testViewAnchor),
+      ("testUIColorRGB", testUIColorRGB)
     ])
     #endif
 
