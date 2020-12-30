@@ -16,7 +16,7 @@ public final class PaddingLabel: UILabel {
   private var left: CGFloat
   private var right: CGFloat
 
-  init(padding: UIEdgeInsets, hasUnderline: Bool = false) {
+  public init(padding: UIEdgeInsets, hasUnderline: Bool = false) {
     self.top = padding.top
     self.left = padding.left
     self.bottom = padding.bottom
