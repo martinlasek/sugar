@@ -62,5 +62,14 @@ public extension UIView {
 
     NSLayoutConstraint.activate(constraints)
   }
+    
+    func addSubviews(_ views: UIView...)
+    {
+        for view in views {
+            addSubview(view)
+            
+        }
+        
+    }
 }
 #endif
